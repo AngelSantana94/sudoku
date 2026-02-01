@@ -27,11 +27,11 @@ export class Sudoku {
         this.secondsElapsed = 0;
 
         //5- Música
-        this.music = new Audio('/sound/music.mp3');
-        this.click = new Audio("/sound/click.mp3");
-        this.arrows = new Audio("/sound/arrows.mp3");
-        this.aplausos = new Audio("/sound/aplausos.mp3");
-        this.clickTablero = new Audio("/sound/click-02.mp3")
+        this.music = new Audio(`${base}sound/music.mp3`);
+        this.click = new Audio(`${base}sound/click.mp3`);
+        this.arrows = new Audio(`${base}sound/arrows.mp3`);
+        this.aplausos = new Audio(`${base}sound/aplausos.mp3`);
+        this.clickTablero = new Audio(`${base}sound/click-02.mp3`)
 
 
         this.music.loop = true;
