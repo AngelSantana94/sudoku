@@ -27,6 +27,7 @@ export class Sudoku {
         this.secondsElapsed = 0;
 
         //5- Música
+        const base = import.meta.env.BASE_URL;
         this.music = new Audio(`${base}sound/music.mp3`);
         this.click = new Audio(`${base}sound/click.mp3`);
         this.arrows = new Audio(`${base}sound/arrows.mp3`);
