@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
+    <title>sudoku</title>
+  </head>
+  <body class="bg-slate-900 bg-[url('/fondo01.jpeg')] bg-cover bg-center bg-no-repeat min-h-screen w-full flex items-center justify-center m-0 overflow-hidden">
+    <div id="header" class="flex flex-col items-center justify-center min-h-screen">
+      <div id="title" class="mb-20 ">
+        <img src="/title.png" alt="title" >
+      </div>
+      <button
+      id="button"
+      onclick="startGame()"
+      class="w-65 h-20 bg-[url('/button.jpeg')] bg-cover bg-center rounded-4xl shadow-[8px_8px_15px_-3px_rgba(0,0,0,0.9)] font-['Fredoka'] font-bold text-5xl text-[#E6DED1]  text-shadow-[4px_4px_2px_rgba(0,0,0,0.5)] active:scale-95 transition-transform flex items-center justify-center">
+        Jugar
+      </button>
+    </div>
+    <div class="flex flex-col items-center">
+      <div id="time" class="hidden w-45 h-13 bg-[url('/button.jpeg')] bg-cover bg-center rounded-4xl shadow-[8px_8px_15px_-3px_rgba(0,0,0,0.9)] font-['Fredoka'] font-bold text-4xl text-[#E6DED1]  text-shadow-[4px_4px_2px_rgba(0,0,0,0.5)] active:scale-95 transition-transform flex items-center justify-center mb-8">
+        <span>00</span>:
+        <span>00</span>
+      </div>
+      <div id="boardGame" class="hidden relative w-[90vw] h-[90vw] max-w-137.5 max-h-137.5 shadow-2xl rounded-xl overflow-hidden mb-8">
+          <img src="/board.jpeg" class="absolute inset-0 w-full h-full object-contain pointer-events-none z-10" alt="Tablero Sudoku">
+          <div id="sudoku-grid" class="absolute inset-0 z-20 grid grid-cols-9 grid-rows-9 bg-transparent p-3.5">
+          </div>
+  
+      </div>
+      <div id="button-bottom" class=" hidden flex flex-row items-center gap-5">
+        <button
+        id="resolver"
+        onclick="solveGame()"
+        class="w-45 h-15 bg-[url('/button.jpeg')] bg-cover bg-center rounded-4xl shadow-[8px_8px_15px_-3px_rgba(0,0,0,0.9)] font-['Fredoka'] font-bold text-4xl text-[#E6DED1]  text-shadow-[4px_4px_2px_rgba(0,0,0,0.5)] active:scale-95 transition-transform flex items-center justify-center"
+        >Resolver
+        </button>
+        <button 
+        id="reiniciar"
+        onclick="resetGame()"
+        class="w-45 h-15 bg-[url('/button.jpeg')] bg-cover bg-center rounded-4xl shadow-[8px_8px_15px_-3px_rgba(0,0,0,0.9)] font-['Fredoka'] font-bold text-4xl text-[#E6DED1]  text-shadow-[4px_4px_2px_rgba(0,0,0,0.5)] active:scale-95 transition-transform flex items-center justify-center">
+          Reiniciar
+        </button>
+        <button
+        id="salir"
+        onclick="exitGame()"
+        class="w-45 h-15 bg-[url('/button.jpeg')] bg-cover bg-center rounded-4xl shadow-[8px_8px_15px_-3px_rgba(0,0,0,0.9)] font-['Fredoka'] font-bold text-4xl text-[#E6DED1]  text-shadow-[4px_4px_2px_rgba(0,0,0,0.5)] active:scale-95 transition-transform flex items-center justify-center">
+          Salir
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
